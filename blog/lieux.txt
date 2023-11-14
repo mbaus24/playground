@@ -1,0 +1,6 @@
+infiermerie (taille = 2)si blesse 
+parc aquatique (taille =5) si normal
+lit a loutres (taille =1) si fatigué 
+mangeoire (taille = 3) si affamé
+
+normal > fatigué > affamé > blessé
