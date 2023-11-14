@@ -1,6 +1,9 @@
-h1 a, h2 a { color: #00eaff; font-family: 'Roboto'; }
+h1 a, h2 a { color: #ffffff; font-family: 'Roboto'; }
 
-body { padding-left: 15px; } 
+body { 
+    padding-left: 15px; 
+    color: #ffffff;
+} 
 
 .page-header {
     background-color: #C25100;
@@ -53,7 +56,7 @@ h4 {
  
 .post h2 a,
 .post h2 a:visited {
-    color: #000000;
+    color: #ffffff;
 }
  
 .post > .date,
@@ -72,3 +75,14 @@ h4 {
     color: #FFFFFF;
     background-color: #C25100;
 }
+
+
+.page-header:img {
+    width: 150px;
+
+}
+
+body {
+    background-color: rgb(54, 49, 49);
+}
+

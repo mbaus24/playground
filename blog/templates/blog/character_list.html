@@ -2,17 +2,17 @@
 {% block content %}
     {% for characters in character %}
                 
-        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 list-none p-0">
-            <li class="flex w-full">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 list-none p-0">
+            
                 <div class="card bg-danger text-white">
-                    <img class="card-img-top" src="{{ characters.photo }}" alt="{{ characters.title }}">
+                    <img class="card-img-top" src="{{ characters.photo }}" alt="{{ characters.title }}" width="500" height="500 ">
                     <div class="card-body">
-                        <h5 class="card-title">{{ characters.code }}</h5>
-                         <p class="card-text">{{ characters.description }}</p>
-                         <a href="{% url 'character_detail' pk=characters.pk %}" class="stretched-link">plus d'infos</a>
+                        <h3 class="card-title">{{ characters.id_character }}</h3>
+                         <p class="card-text">{{ characters.code }}</p>
+                         <a href="{% url 'character_detail' id_character=characters.id_character %}" class="stretched-link"></a>
                     </div>
                  </div>
-            </li>
+            
         </ul>
 
             {% endfor %}

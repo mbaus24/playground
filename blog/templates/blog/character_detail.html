@@ -2,23 +2,31 @@
 {% block content %}
 
         <div class=".justify-content-md-center">
-            <h1> {{ character.code }} </h1>
-            <img src="{{ character.photo }}" alt="{{ character.title }}">
+            
+            <div class="text-center">
+                <h1>{{ character.code }}</h1>
+                <img src="{{ character.photo }}" alt="{{ character.title }}" width="500" height="500">
+            </div>
+            
             <div class="card-body">
                 <h2> Description </h2>
                 
                  <p class="card-text">{{ character.description }}</p>
-                 <p> Etat : {{character.etat}} </p>
+                 <p> <h3>Etat :</h3> {{character.etat}} </p>
                  
                  <form method="POST" class="post-form">{% csrf_token %}
                     <b> Changer : </b> {{ form.as_ul }}
                     <button type="submit" class="btn btn-outline-light">OK</button>
-                    <a href="{% url 'character_list' %}">Back</a>
+                </form>
                     <h2> Lieu actuel</h2>
                     <p class="card-text">{{ character.lieu }}</p>
-                    <img src="{{ character.lieu.photo }}" alt="{{ character.lieu }}">
-                </form>
+                    <img src="{{ character.lieu.photo }}" alt="{{ character.lieu }}" width="200" height="200">
+
+                    
+                
+                
             </div>
+            <a href="{% url 'character_list' %}">retour</a>
          </div>
     </li>
 </ul>
