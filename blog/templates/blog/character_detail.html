@@ -18,6 +18,11 @@
                     <b> Changer : </b> {{ form.as_ul }}
                     <button type="submit" class="btn btn-outline-light">OK</button>
                 </form>
+                {% if message != ''%}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+            {% endif %}
                     <h2> Lieu actuel</h2>
                     <p class="card-text">{{ character.lieu }}</p>
                     <img src="{{ character.lieu.photo }}" alt="{{ character.lieu }}" width="200" height="200">

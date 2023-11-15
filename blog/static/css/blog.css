@@ -86,3 +86,27 @@ body {
     background-color: rgb(54, 49, 49);
 }
 
+
+
+card bg-danger text-white{
+    width:100px;
+    height: 100px;
+}
+
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 0 10 20 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

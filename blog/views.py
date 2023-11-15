@@ -8,6 +8,14 @@ from random import randint
 def character_list(request):
         character = Character.objects.order_by('code')
         return render(request, 'blog/character_list.html', {'character': character})
+
+def equipement_list(request):
+        equipement = Equipement.objects.order_by('id_equip')
+        occupants = Character.objects.filter(lieu="parc_aquatique")
+        occupants_names = ", ".join([o.id_character for o in occupants])
+        
+        message = f"Le lieu est occupé par {occupants_names}"
+        return render(request, 'blog/equipement_list.html', {'equipement': equipement, 'message': message})
     
 def character_detail(request, id_character):
     character = get_object_or_404(Character, id_character=id_character)

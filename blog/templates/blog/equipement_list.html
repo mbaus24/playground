@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Equipement List</h1>
+    <ul>
+        {% for equipement in equipement %}
+            <li>
+                <h2>{{ equipement.id_equip }}</h2>
+                <p>Etat: {{ equipement.disponibilite }}</p>
+                <img src="{{ equipement.photo }}" alt="{{ equipement.id_equip }} picture" width="500" height="500">
+                {% if message != ''%}
+                <div class="alert " role="alert">
+                    {{message}}
+                </div>
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
